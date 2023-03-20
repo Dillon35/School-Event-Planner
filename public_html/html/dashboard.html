@@ -1,0 +1,34 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <title>Dashboard</title>
+        
+    </head>
+        
+        <body>
+
+            <!--Main-->
+            <div id="main" class="content col-10 justify-content-center">
+                <!-- <p>-This is where the calendar will go-</p class="col-7"> -->
+                <div class="filter">
+                    <input class="arrowButtons" type="button" value="<" onclick="setPrevious()">
+                    <input class="arrowButtons" type="button" value=">" onclick="setNext()">
+                    <input class="controls" type="button" value="Today" onclick="setDayCalendar('today')" >
+                    <input class="controls" id="monthPicker"  type="date"  onchange="changeView()" >
+                    <select class="select controls" id="viewPicker" onchange="changeView()">
+                        <option id="day">Day</option>
+                        <option id="week">Week</option>
+                    </select>
+                </div>
+                <div id="calendarView" class="calendarView">
+                </div>
+           </div>
+
+        </body>   
+
+</html>
